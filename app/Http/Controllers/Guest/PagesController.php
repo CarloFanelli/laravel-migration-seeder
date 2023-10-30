@@ -19,8 +19,8 @@ class PagesController extends Controller
     {
         //$today_trains = Train::where('departure_time', '=', Date('yy-mm-gg'))->get();
         //$today_trains = Train::select("SELECT * FROM trains WHERE day(departure_time) = day(now());", [1]);
-        $today_trains = Train::select('*', [1]);
 
+        $today_trains = Train::whereDay('departure_time', '=', date('d'))->get();
         //dd($today_trains);
 
         return view('today', compact('today_trains'));
