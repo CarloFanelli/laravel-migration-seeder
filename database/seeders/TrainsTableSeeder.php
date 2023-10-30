@@ -20,7 +20,7 @@ class TrainsTableSeeder extends Seeder
             $train->company =  $faker->word();
             $train->departure_station = $faker->city();
             $train->arrival_station = $faker->city();
-            $train->departure_time = $faker->dateTimeBetween('now', '+2 week');
+            $train->departure_time = $faker->dateTimeBetween('now', 'now');
             $train->arrival_time = $faker->dateTimeBetween('now', '+2 week');
             $train->train_code = $faker->bothify('???-###');
             $train->carriage_number = $faker->numberBetween(2, 15);

@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PagesController::class, 'index']);
+
+Route::get('today', [PagesController::class, 'today'])->name('today');
