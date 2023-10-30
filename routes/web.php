@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PagesController::class, 'index']);
+Route::get('/', [PagesController::class, 'index'])->name('home');
 
 Route::get('today', [PagesController::class, 'today'])->name('today');
